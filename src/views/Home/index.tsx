@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Movie as IMovie, MoviesService } from "../../api/MoviesService";
 import Movie from "../../components/Movie";
 
-export default function Home() {
+export function Home() {
   const [movies, setMovies] = useState<IMovie[]>([]);
 
   useEffect(() => {
