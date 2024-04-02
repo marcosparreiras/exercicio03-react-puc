@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 
 export interface Movie {
-  id: number;
+  id: string;
   poster_path: string;
   title: string;
   budget: number;
