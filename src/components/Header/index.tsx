@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <h1>Bem-vindo(a) ao Movies List</h1>
+        <h1>Welcome to Movies List</h1>
         <MainMenu />
       </header>
       <Outlet />

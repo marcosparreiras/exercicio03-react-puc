@@ -19,7 +19,7 @@ export default function Movie({ movie }: MovieProps) {
       </div>
       <div>
         <h3>{movie.title}</h3>
-        <Link to={`/movie/${movie.id}`}>Ver detalhes</Link>
+        <Link to={`/movie/${movie.id}`}>Show details</Link>
       </div>
     </div>
   );

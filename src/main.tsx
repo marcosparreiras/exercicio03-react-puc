@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import { Home } from "./views/Home";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { MovieDetails } from "./views/MovieDetails";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Home } from "./views/Home";
+import { MovieDetails } from "./views/MovieDetails";
+import "./index.css";
+import { Favorites } from "./views/Favorites";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/movie/:id",
     element: <MovieDetails />,
+  },
+  {
+    path: "/favorites",
+    element: <Favorites />,
   },
 ]);
 

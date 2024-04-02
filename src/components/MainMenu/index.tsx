@@ -7,7 +7,7 @@ export default function MainMenu() {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/favoritos">Favoritos</Link>
+        <Link to="/favoritos">Favorites</Link>
       </li>
     </ul>
   );

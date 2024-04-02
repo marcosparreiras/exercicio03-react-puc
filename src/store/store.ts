@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import favorites from "./features/favorites";
 
-export default configureStore({
+const store = configureStore({
   reducer: {
     favorites,
   },
 });
+
+export default store;
+export type RootStoreState = ReturnType<typeof store.getState>;
