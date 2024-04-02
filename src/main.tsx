@@ -7,19 +7,26 @@ import { Home } from "./views/Home";
 import { MovieDetails } from "./views/MovieDetails";
 import "./index.css";
 import { Favorites } from "./views/Favorites";
+import { RootLayout } from "./views/RootLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/movie/:id",
-    element: <MovieDetails />,
-  },
-  {
-    path: "/favorites",
-    element: <Favorites />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/movie/:id",
+        element: <MovieDetails />,
+      },
+      {
+        path: "/favorites",
+        element: <Favorites />,
+      },
+    ],
   },
 ]);
 
