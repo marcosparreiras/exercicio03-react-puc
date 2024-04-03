@@ -1,0 +1,55 @@
+.movie-container {
+  width: 25rem;
+  height: 52rem;
+  background-color: var(--secondary-bg-color);
+  border-radius: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 3px 5px var(--primary-color);
+}
+
+.movie-container > img {
+  border-radius: 1.6rem 1.6rem 0 0;
+  width: 100%;
+  filter: brightness(0.6);
+  transition: 200ms linear;
+}
+
+.movie-container > img:hover {
+  filter: brightness(1);
+}
+
+.movie-content-container {
+  padding: 1rem 1.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-content-container > h3 {
+  text-align: center;
+}
+
+.movie-btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.movie-btn {
+  padding: 0.2rem 0.4rem;
+  border: none;
+  border-radius: 1rem;
+  color: var(--);
+}
+
+.movie-btn-add {
+  background-color: var(--btn-primary-bg-color);
+}
+
+.movie-btn-remove {
+  color: var(--btn-secondary-bg-color);
+  background-color: var(--primary-bg-color);
+}

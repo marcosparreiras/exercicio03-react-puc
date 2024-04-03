@@ -1,0 +1,40 @@
+.favotites-container {
+  margin-top: 3.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favotites-container h1 {
+  border-bottom: 1px solid var(--primary-color);
+  max-width: 565px;
+}
+
+.favotites-container h3 {
+  margin-top: 2.2rem;
+}
+
+.favotites-container ul {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+}
+
+.favotites-container li {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--primary-color);
+}
+
+.favotites-container li:last-child {
+  border-bottom: none;
+}
+
+.favotites-container li > button {
+  margin-left: 1.6rem;
+  background: none;
+  border: none;
+  color: var(--btn-secondary-bg-color);
+}

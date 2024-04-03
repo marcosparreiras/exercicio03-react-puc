@@ -5,7 +5,7 @@ import store from "./store/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./views/Home";
 import { MovieDetails } from "./views/MovieDetails";
-import "./index.css";
+import "./global.css";
 import { Favorites } from "./views/Favorites";
 import { RootLayout } from "./views/RootLayout";
 

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./styles.css";
 
 export default function MainMenu() {
   return (
-    <ul>
+    <ul className="main-menu">
       <li>
         <Link to="/">Home</Link>
       </li>

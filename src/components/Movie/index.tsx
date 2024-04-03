@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { RootStoreState } from "../../store/store";
 import { addMovie, removeMovie } from "../../store/features/favorites";
 import { Movie as IMovie } from "../../api/MoviesService";
+import "./styles.css";
 
 interface MovieProps {
   movie: IMovie;
@@ -16,30 +17,33 @@ export default function Movie({ movie }: MovieProps) {
   function buttonGenerator(movieId: string, favoritesIds: string[]) {
     if (favoritesIds.includes(movieId)) {
       return (
-        <button onClick={() => dispatch(removeMovie(movie))}>
+        <button
+          className="movie-btn movie-btn-remove"
+          onClick={() => dispatch(removeMovie(movie))}
+        >
           Remove from favorites
         </button>
       );
     }
     return (
-      <button onClick={() => dispatch(addMovie(movie))}>
+      <button
+        className="movie-btn movie-btn-add"
+        onClick={() => dispatch(addMovie(movie))}
+      >
         Add to favorites
       </button>
     );
   }
 
   return (
-    <div>
-      <div>
-        <img
-          src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-          alt=""
-        />
-      </div>
-      <div>
+    <div className="movie-container">
+      <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt="" />
+      <div className="movie-content-container">
         <h3>{movie.title}</h3>
-        <Link to={`/movie/${movie.id}`}>Show details</Link>
-        {buttonGenerator(movie.id, favoritesIds)}
+        <div className="movie-btns-container">
+          <Link to={`/movie/${movie.id}`}>Show details</Link>
+          {buttonGenerator(movie.id, favoritesIds)}
+        </div>
       </div>
     </div>
   );
